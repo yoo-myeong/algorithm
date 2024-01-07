@@ -9,7 +9,10 @@ public class Solution {
     }
 
     public static String solution(String[] seoul) {
-        int index = IntStream.range(0, seoul.length).filter(i -> Objects.equals(seoul[i], "Kim")).findFirst().orElseThrow();
+        int index = IntStream.range(0, seoul.length)
+                .filter(i -> Objects.equals(seoul[i], "Kim"))
+                .findFirst()
+                .orElseThrow();
 
         return "김서방은 " + String.valueOf(index) + "에 있다";
     }
