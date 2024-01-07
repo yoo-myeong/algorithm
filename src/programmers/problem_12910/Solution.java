@@ -8,7 +8,10 @@ public class Solution {
     }
 
     public static int[] solution(int[] arr, int divisor) {
-        int[] answer = Arrays.stream(arr).filter(e -> e%divisor == 0).sorted().toArray();
+        int[] answer = Arrays.stream(arr)
+                .filter(e -> e%divisor == 0)
+                .sorted()
+                .toArray();
         return answer.length == 0 ? new int[]{-1} : answer;
     }
 }
